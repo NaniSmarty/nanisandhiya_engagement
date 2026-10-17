@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Sandhiya &amp; Narayana Raju – Engagement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#3b0f1b;--wine2:#5a1a2a;--rose:#8a2f45;--blush:#f7e6e1;--paper:#fbf1ee;--ink:#4a1a26;--gold:#c9a35b;--gold2:#e8cf92;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#f6e3de;--blush:#f1d9d3}}
+:root[data-theme="dark"]{--paper:#f6e3de;--blush:#f1d9d3}
+html{scroll-snap-type:y mandatory;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--wine)}
+html.lock{overflow:hidden}
+*{box-sizing:border-box;margin:0}
+body{color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;line-height:1.5}
+.script{font-family:"Pinyon Script","Snell Roundhand",cursive;font-weight:400}
+.screen{min-height:100vh;min-height:100svh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 28px;position:relative;overflow:hidden}
+.s1{background:radial-gradient(circle at 50% 45%,var(--wine2),var(--wine) 72%);color:var(--gold2)}
+.s2{background:linear-gradient(var(--paper),var(--blush))}
+.s3{background:radial-gradient(circle at 50% 40%,var(--wine2),var(--wine) 75%);color:var(--gold2)}
+.s4{background:var(--paper)}
+.s5{background:var(--blush)}
+.t{font-size:15px;letter-spacing:.22em;font-weight:600;max-width:340px}
+h1,h2{font-weight:500;letter-spacing:.06em;line-height:1.25}
+h1{font-size:clamp(26px,8vw,36px)}
+h2{font-size:clamp(24px,7vw,32px)}
+.sub{max-width:310px;margin-top:14px;font-style:italic}
+/* envelope */
+.env{position:relative;width:min(70vw,290px);aspect-ratio:1/1.1;margin:34px 0 22px;border-radius:6px;overflow:hidden;background:linear-gradient(#e9c98f,#fff2cf);box-shadow:0 18px 50px #0009}
+.glow{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,#fff8dc,#f2cf86 60%,#c9a35b);opacity:0;transition:opacity .8s .3s}
+.fl{position:absolute;transition:transform 1s ease}
+.fl.t{top:0;left:0;right:0;height:54%;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;background:linear-gradient(#5a1a2a,#4a1423);z-index:3}
+.fl.l,.fl.r{top:0;bottom:0;width:50%;background:var(--wine);z-index:2}
+.fl.l{left:0;clip-path:polygon(0 0,100% 50%,0 100%);transform-origin:left}
+.fl.r{right:0;clip-path:polygon(100% 0,0 50%,100% 100%);transform-origin:right}
+.fl.b{bottom:0;left:0;right:0;height:54%;clip-path:polygon(0 100%,100% 100%,50% 0);transform-origin:bottom;background:linear-gradient(#3d1019,#5a1a2a);z-index:2}
+.opened .fl.t{transform:rotateX(180deg)}.opened .fl.l{transform:rotateY(-180deg)}.opened .fl.r{transform:rotateY(180deg)}.opened .fl.b{transform:rotateX(-180deg)}
+.opened .glow{opacity:1}
+.seal{position:absolute;z-index:5;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;border:0;cursor:pointer;font-size:32px;color:#6b4a1c;background:radial-gradient(circle at 35% 30%,#f9ecd2,#e3c795 55%,#b99352);box-shadow:0 6px 18px #0007;transition:transform .5s,opacity .4s .3s;animation:pulse 2.2s infinite}
+.opened .seal{transform:scale(1.4);opacity:0;animation:none}
+@keyframes pulse{50%{box-shadow:0 0 0 12px #e8cf9244,0 6px 18px #0007}}
+.enter{font:600 17px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;color:var(--gold2);background:none;border:1.5px solid var(--gold);border-radius:40px;padding:12px 30px;cursor:pointer}
+.opened+.enter,.enter:disabled{opacity:.4}
+/* names */
+.nm{font-size:clamp(50px,16vw,72px);color:var(--rose);line-height:1.05}
+.amp{font-size:34px;color:var(--gold);margin:6px 0}
+.names>*{opacity:0;transform:translateY(14px);transition:opacity 1s,transform 1s}
+.names.in>*{opacity:1;transform:none}
+.names.in>:nth-child(2){transition-delay:.5s}.names.in>:nth-child(3){transition-delay:1s}
+/* scratch */
+.sc{position:relative;width:min(84vw,320px);height:120px;margin:30px 0 8px;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px #0007}
+.under{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(#fff4d6,#f0d79c);color:var(--wine);font-size:21px;font-weight:600;letter-spacing:.06em;padding:8px;line-height:1.3}
+canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;transition:opacity 1s}
+canvas.gone{opacity:0;pointer-events:none}
+.cd{margin-top:8px;opacity:0;transition:opacity 1s;font-size:18px}
+.cd.show{opacity:1}
+/* details */
+.rows{margin:22px 0 6px;max-width:330px}
+.rows p{margin:10px 0}
+.rows b{display:block;font-size:14px;letter-spacing:.2em;color:var(--rose)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.btn{padding:12px 24px;border-radius:40px;border:1.5px solid var(--wine);color:var(--wine);text-decoration:none;font:600 18px "Cormorant Garamond",Georgia,serif}
+.btn.f{background:var(--wine);color:#fff}
+.btn:focus-visible,.enter:focus-visible,.seal:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.letter{max-width:360px;text-align:left;font-size:20px}
+.letter p{margin-bottom:16px}
+.sign{text-align:center;font-size:40px;color:var(--rose);line-height:1.2}
+/* petals */
+.p{position:fixed;top:-30px;width:12px;height:16px;border-radius:70% 0 70% 0;background:var(--rose);opacity:.8;z-index:50;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(var(--r))}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.p{display:none}}
+</style>
+</head>
+<body>
+
+<section class="screen s1" id="s1">
+  <p class="t">A LITTLE MAGIC, A LOT OF LOVE…</p>
+  <div class="env" id="env"><div class="glow"></div><div class="fl l"></div><div class="fl r"></div><div class="fl b"></div><div class="fl t"></div>
+    <button class="seal script" id="seal" aria-label="Tap to enter">SN</button></div>
+  <p class="sub" style="margin:0 0 22px">Step into our story, where forever begins.</p>
+  <button class="enter" id="enter">TAP TO ENTER</button>
+</section>
+
+<section class="screen s2" id="s2">
+  <p class="t">TWO SOULS, ONE DESTINY</p>
+  <p class="sub">In a world full of moments, we found our forever in each other.</p>
+  <div class="names" id="names" style="margin-top:34px">
+    <div class="nm script">Sandhiya</div>
+    <div class="amp script">&amp;</div>
+    <div class="nm script">Narayana Raju</div>
+  </div>
+</section>
+
+<section class="screen s3" id="s3">
+  <h2>THE DAY OUR FOREVER TAKES FLIGHT</h2>
+  <p class="sub">One special date. Two hearts. A lifetime of tomorrows.</p>
+  <div class="sc"><div class="under">SUNDAY,<br>13TH DECEMBER 2026</div><canvas id="cv" aria-label="Scratch to reveal the date"></canvas></div>
+  <p class="t" id="hint">SCRATCH TO REVEAL THE DATE</p>
+  <p class="cd" id="cd"></p>
+</section>
+
+<section class="screen s4" id="s4">
+  <h2>A RING THAT SPEAKS WHAT WORDS CANNOT</h2>
+  <p class="sub">A promise of forever, a lifetime of choosing each other.</p>
+  <div class="rows">
+    <p class="t" style="max-width:none;margin-top:22px">OUR ENGAGEMENT CEREMONY</p>
+    <p><b>DATE</b>Sunday, 13th December 2026</p>
+    <p><b>TIME</b>6:30 PM – 10:00 PM</p>
+    <p><b>VENUE</b>Dhanalakshmi Park Inn<br><span style="font-size:17px">4/3 V.V Giri Salai, Pachaiyappan St, West Jafferkhanpet, Chennai 600083</span></p>
+  </div>
+  <div class="btns">
+    <a class="btn f" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Dhanalakshmi+Park+Inn+4/3+V.V+Giri+Salai+Pachaiyappan+St+West+Jafferkhanpet+Chennai+600083">View Location</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Sandhiya+%26+Narayana+Raju+Engagement&amp;dates=20261213T183000/20261213T220000&amp;ctz=Asia/Kolkata&amp;location=Dhanalakshmi+Park+Inn,+4/3+V.V+Giri+Salai,+Pachaiyappan+St,+West+Jafferkhanpet,+Chennai+600083&amp;details=Our+engagement+ceremony.+Please+join+us!">Add to Calendar</a>
+  </div>
+</section>
+
+<section class="screen s5" id="s5">
+  <div class="letter">
+    <p class="script" style="font-size:34px;color:var(--rose)">Dear Guest,</p>
+    <p>Two souls are about to make a lifetime promise—a forever-to-infinity bond. To keep this promise alive and blessed, your presence and heartfelt blessings mean the world to us. You are a precious part of our journey, and we truly want you to be our witnesses as we step into eternity. Please join us and grace our special day with your love.</p>
+    <p style="text-align:center;margin-top:26px">With all our love,</p>
+    <p class="sign script">Sandhiya &amp; Narayana Raju</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)},root=document.documentElement;
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  root.classList.add('lock');
+
+  function petals(n){
+    if(reduce)return;
+    for(var i=0;i<n;i++){
+      var p=document.createElement('i');p.className='p';
+      p.style.left=Math.random()*100+'vw';
+      p.style.setProperty('--dx',(Math.random()*160-80)+'px');
+      p.style.setProperty('--r',(Math.random()*720)+'deg');
+      p.style.animationDuration=(3+Math.random()*3)+'s';
+      p.style.animationDelay=(Math.random()*1.2)+'s';
+      p.style.background=['#8a2f45','#c9a35b','#e7a9b4','#f3d9a4'][i%4];
+      document.body.appendChild(p);
+      setTimeout(function(el){el.remove()},8000,p);
+    }
+  }
+
+  var opened=false;
+  function open(){
+    if(opened)return;opened=true;
+    $('env').classList.add('opened');$('enter').disabled=true;
+    setTimeout(function(){
+      root.classList.remove('lock');petals(26);
+      $('s2').scrollIntoView({behavior:reduce?'auto':'smooth'});
+    },1500);
+  }
+  $('seal').onclick=open;$('enter').onclick=open;
+
+  new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)$('names').classList.add('in')})},{threshold:.5}).observe($('s2'));
+
+  /* scratch card */
+  var cv=$('cv'),ctx=cv.getContext('2d'),W,H,down=false,done=false,moves=0;
+  function paint(){
+    var r=cv.getBoundingClientRect();W=cv.width=Math.round(r.width);H=cv.height=Math.round(r.height);
+    var g=ctx.createLinearGradient(0,0,W,H);
+    g.addColorStop(0,'#b88a3e');g.addColorStop(.5,'#f0d58f');g.addColorStop(1,'#b88a3e');
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#7a5a1f';ctx.font='600 20px "Cormorant Garamond",Georgia,serif';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText('SCRATCH HERE',W/2,H/2);
+  }
+  paint();
+  function pos(e){var r=cv.getBoundingClientRect();return[(e.clientX-r.left)*W/r.width,(e.clientY-r.top)*H/r.height]}
+  function scratch(e){
+    if(!down||done)return;
+    var p=pos(e);ctx.globalCompositeOperation='destination-out';
+    ctx.beginPath();ctx.arc(p[0],p[1],20,0,7);ctx.fill();
+    if(++moves%8===0)check();
+  }
+  function check(){
+    var d=ctx.getImageData(0,0,W,H).data,c=0,t=0;
+    for(var i=3;i<d.length;i+=64){t++;if(d[i]<40)c++}
+    if(c/t>.5)reveal();
+  }
+  function reveal(){
+    if(done)return;done=true;cv.classList.add('gone');
+    $('hint').textContent='SAVE THE DATE';petals(34);countdown();
+  }
+  cv.addEventListener('pointerdown',function(e){down=true;cv.setPointerCapture(e.pointerId);scratch(e)});
+  cv.addEventListener('pointermove',scratch);
+  cv.addEventListener('pointerup',function(){down=false;if(!done)check()});
+  cv.addEventListener('pointercancel',function(){down=false});
+  addEventListener('resize',function(){if(!done)paint()});
+
+  function countdown(){
+    var el=$('cd'),t=Date.UTC(2026,11,13,13,0,0);
+    function tick(){
+      var s=Math.floor((t-Date.now())/1000);
+      if(s<=0){el.textContent='Today is the day!';return}
+      var d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
+      el.textContent=d+' days '+h+' hours '+m+' minutes to go';
+    }
+    tick();setInterval(tick,30000);el.classList.add('show');
+  }
+})();
+</script>
+</body>
+</html>
