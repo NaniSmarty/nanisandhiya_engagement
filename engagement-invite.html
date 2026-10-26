@@ -21,7 +21,7 @@ body{color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:2
 .s1{background:radial-gradient(circle at 50% 45%,var(--wine2),var(--wine) 72%);color:var(--gold2)}
 .s2{background:radial-gradient(circle at 50% 45%,var(--wine2),var(--wine) 72%);color:var(--gold2)}
 .s3{background:radial-gradient(circle at 50% 40%,var(--wine2),var(--wine) 75%);color:var(--gold2)}
-.s4{background:var(--paper)}
+.s4{background:radial-gradient(circle at 50% 40%,var(--wine2),var(--wine) 75%);color:var(--gold2)}
 .s5{background:var(--blush)}
 .t{font-size:15px;letter-spacing:.22em;font-weight:600;max-width:340px}
 h1,h2{font-weight:500;letter-spacing:.06em;line-height:1.25}
@@ -69,8 +69,11 @@ h2{font-size:clamp(24px,7vw,32px)}
 .enter{font:600 17px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;color:var(--gold2);background:none;border:1.5px solid var(--gold);border-radius:40px;padding:12px 30px;cursor:pointer}
 .enter:disabled{opacity:.4}
 /* names */
-.nm{font-family:"Playfair Display","Times New Roman",Georgia,serif;font-weight:700;font-size:clamp(36px,11vw,54px);color:#fbefe6;line-height:1.15;letter-spacing:.02em;text-shadow:0 2px 22px #c9a35b66}
-.amp{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:32px;color:var(--gold);margin:8px 0}
+.nm{font-family:"Cinzel Decorative","Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(23px,7vw,34px);line-height:1.3;letter-spacing:.07em;text-transform:uppercase;background:linear-gradient(100deg,#f3d98f,#fff8e2,#d4a94f,#fff8e2,#f3d98f);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 14px #c9a35b66);animation:shim 5s linear infinite}
+@keyframes shim{to{background-position:-220% 0}}
+.amp{display:flex;align-items:center;justify-content:center;gap:14px;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:700;font-size:36px;color:var(--gold);margin:10px 0}
+.amp:before,.amp:after{content:"";width:56px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.amp:after{transform:scaleX(-1)}
 .names>*{opacity:0;transform:translateY(14px);transition:opacity 1s,transform 1s}
 .names.in>*{opacity:1;transform:none}
 .names.in>:nth-child(2){transition-delay:.5s}.names.in>:nth-child(3){transition-delay:1s}
@@ -82,12 +85,16 @@ canvas.gone{opacity:0;pointer-events:none}
 .cd{margin-top:8px;opacity:0;transition:opacity 1s;font-size:18px}
 .cd.show{opacity:1}
 /* details */
-.rows{margin:22px 0 6px;max-width:330px}
+.rows{margin:22px 0 6px;max-width:340px;width:100%;padding:6px 18px 14px;border:1px solid #c9a35b88;border-radius:18px;background:#ffffff0a;box-shadow:0 0 40px #c9a35b22}
+.ev{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:20px;letter-spacing:.12em;line-height:1.35;color:var(--gold2);padding:14px 6px;border-bottom:1px solid var(--gold);text-shadow:0 0 20px #e8cf9277}
+.hl{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:22px;line-height:1.3;color:#fff3d6;text-shadow:0 0 18px #e8cf9288}
 .rows p{margin:10px 0}
-.rows b{display:block;font-size:14px;letter-spacing:.2em;color:var(--rose)}
+.rows b{display:block;font-size:14px;letter-spacing:.2em;color:var(--gold)}
 .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
 .btn{padding:12px 24px;border-radius:40px;border:1.5px solid var(--wine);color:var(--wine);text-decoration:none;font:600 18px "Cormorant Garamond",Georgia,serif}
 .btn.f{background:var(--wine);color:#fff}
+.s4 .btn{border-color:var(--gold);color:var(--gold2)}
+.s4 .btn.f{background:linear-gradient(#f0d58f,#c9a35b);color:#3b0f1b}
 .btn:focus-visible,.enter:focus-visible,.seal:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .letter{max-width:360px;text-align:left;font-size:20px}
 .letter p{margin-bottom:16px}
@@ -149,10 +156,10 @@ canvas.gone{opacity:0;pointer-events:none}
   <h2>A RING THAT SPEAKS WHAT WORDS CANNOT</h2>
   <p class="sub">A promise of forever, a lifetime of choosing each other.</p>
   <div class="rows">
-    <p class="t" style="max-width:none;margin-top:22px">OUR ENGAGEMENT CEREMONY</p>
-    <p><b>DATE</b>Sunday, 13th December 2026</p>
-    <p><b>TIME</b>6:30 PM – 10:00 PM</p>
-    <p><b>VENUE</b>Dhanalakshmi Park Inn<br><span style="font-size:17px">4/3 V.V Giri Salai, Pachaiyappan St, West Jafferkhanpet, Chennai 600083</span></p>
+    <p class="ev">OUR ENGAGEMENT CEREMONY</p>
+    <p><b>DATE</b><span class="hl">Sunday, 13th December 2026</span></p>
+    <p><b>TIME</b><span class="hl">6:30 PM – 10:00 PM</span></p>
+    <p><b>VENUE</b><span class="hl">Dhanalakshmi Park Inn</span><br><span style="font-size:17px">4/3 V.V Giri Salai, Pachaiyappan St, West Jafferkhanpet, Chennai 600083</span></p>
   </div>
   <div class="btns">
     <a class="btn f" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Dhanalakshmi+Park+Inn+4/3+V.V+Giri+Salai+Pachaiyappan+St+West+Jafferkhanpet+Chennai+600083">View Location</a>
